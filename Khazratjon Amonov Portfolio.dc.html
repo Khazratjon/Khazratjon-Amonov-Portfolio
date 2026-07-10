@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Khazratjon Amonov — Data Analytics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: #FAFAFA; color: #1a1d21; font-family: 'Space Grotesk', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent, #1D4ED8); text-decoration: none; }
+    a:hover { color: #12318f; text-decoration: underline; }
+    @keyframes spark-draw { to { stroke-dashoffset: 0; } }
+  </style>
+</helmet>
+<div style="--accent: {{accent}}; --photo-r: {{photoRadius}}; background: #FAFAFA; min-height: 100vh">
+  <main style="max-width: 880px; margin: 0 auto; padding: 0 24px">
+
+    <!-- HERO -->
+    <header data-screen-label="Hero" style="padding: 96px 0 72px; position: relative">
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 40px">
+        <img src="photo.png" alt="Portrait of Khazratjon Amonov in a navy blazer" width="168" height="168" style="width: 168px; height: 168px; object-fit: cover; object-position: top; border-radius: var(--photo-r, 50%); flex: none; border: 3px solid var(--accent, #1D4ED8); box-shadow: 0 0 0 6px #FAFAFA, 0 0 0 7px #e2e5ea" />
+        <div style="flex: 1 1 380px; min-width: 300px">
+          <p style="margin: 0 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #1D4ED8)">Brooklyn, NY</p>
+          <h1 style="margin: 0; font-size: clamp(40px, 7vw, 62px); line-height: 1.02; letter-spacing: -0.025em; font-weight: 700">Khazratjon Amonov</h1>
+          <p style="margin: 18px 0 0; font-size: 19px; line-height: 1.45; color: #4b5158">Data Analytics Student <span style="color: #b0b6bd">·</span> <span style="font-family: 'IBM Plex Mono', monospace; font-size: 16px">Python · SQL · Tableau · R</span></p>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px">
+            <a href="mailto:khazratjona3@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; background: var(--accent, #1D4ED8); color: #ffffff; padding: 12px 22px; border-radius: 6px; font-weight: 600; font-size: 15px; text-decoration: none" style-hover="background: #12318f; color: #ffffff; text-decoration: none">Email me</a>
+            <a href="tel:+13478330788" style="display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid #d4d8de; color: #1a1d21; padding: 12px 22px; border-radius: 6px; font-weight: 500; font-size: 15px; font-family: 'IBM Plex Mono', monospace; text-decoration: none" style-hover="border-color: var(--accent, #1D4ED8); color: var(--accent, #1D4ED8); text-decoration: none">(347) 833-0788</a>
+          </div>
+        </div>
+      </div>
+      <!-- sparkline signature -->
+      <svg id="hero-spark" viewBox="0 0 880 60" preserveAspectRatio="none" aria-hidden="true" style="display: block; width: 100%; height: 60px; margin-top: 56px">
+        <polyline id="spark-path" points="0,48 70,44 140,50 210,36 280,40 350,28 420,34 490,22 560,27 630,16 700,21 770,10 840,14 880,6" fill="none" stroke="var(--accent, #1D4ED8)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline>
+        <circle cx="880" cy="6" r="4" fill="var(--accent, #1D4ED8)"></circle>
+      </svg>
+      <div style="display: flex; justify-content: space-between; border-top: 1px solid #e2e5ea; padding-top: 10px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: #9aa1a9">
+        <span>2023</span><span>2024</span><span>2025</span><span>2026</span>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section data-screen-label="About" data-reveal="1" style="padding: 32px 0 72px">
+      <h2 style="margin: 0 0 20px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #1D4ED8); display: flex; align-items: center; gap: 12px"><span style="width: 28px; height: 2px; background: var(--accent, #1D4ED8); display: inline-block"></span>About</h2>
+      <p style="margin: 0; font-size: clamp(19px, 2.6vw, 24px); line-height: 1.55; max-width: 760px; font-weight: 400; color: #2a2e33">I'm a Computer Information Systems major on the Data Analytics track at Baruch College's Zicklin School of Business. As a Data Analytics Resident with the NYC Tech Talent Pipeline, I build predictive models in Python and design executive Tableau dashboards that turn raw data into decision-ready insights. My background spans nonprofit fundraising, sales, and operations — so I bring both the analysis and the business context.</p>
+    </section>
+
+    <!-- SKILLS -->
+    <section data-screen-label="Skills" data-reveal="1" style="padding: 0 0 80px">
+      <h2 style="margin: 0 0 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #1D4ED8); display: flex; align-items: center; gap: 12px"><span style="width: 28px; height: 2px; background: var(--accent, #1D4ED8); display: inline-block"></span>Technical Skills</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0; border-top: 1px solid #e2e5ea">
+        <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="6">
+          <div style="border-bottom: 1px solid #e2e5ea; padding: 22px 24px 22px 0">
+            <div style="display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px">
+              <span style="width: 10px; height: 10px; background: var(--accent, #1D4ED8); flex: none; opacity: {{ g.opacity }}"></span>
+              <h3 style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: #6b7178">{{ g.label }}</h3>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 8px">
+              <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="4">
+                <span style="font-size: 14px; color: #2a2e33; background: #ffffff; border: 1px solid #e2e5ea; border-radius: 4px; padding: 5px 10px">{{ s }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section data-screen-label="Experience" style="padding: 0 0 80px">
+      <h2 data-reveal="1" style="margin: 0 0 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #1D4ED8); display: flex; align-items: center; gap: 12px"><span style="width: 28px; height: 2px; background: var(--accent, #1D4ED8); display: inline-block"></span>Experience</h2>
+      <div style="display: flex; flex-direction: column; gap: 0">
+        <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="6">
+          <article data-reveal="1" style="display: grid; grid-template-columns: minmax(150px, 190px) 1fr; gap: 8px 32px; padding: 28px 0; border-top: 1px solid #e2e5ea">
+            <div>
+              <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--accent, #1D4ED8); font-weight: 500">{{ j.dates }}</p>
+              <p style="margin: 6px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa1a9">{{ j.tag }}</p>
+            </div>
+            <div>
+              <h3 style="margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.01em">{{ j.role }}</h3>
+              <p style="margin: 4px 0 14px; font-size: 15px; color: #6b7178">{{ j.org }}</p>
+              <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 7px">
+                <sc-for list="{{ j.bullets }}" as="b" hint-placeholder-count="3">
+                  <li style="font-size: 15px; line-height: 1.55; color: #3c4147">{{ b }}</li>
+                </sc-for>
+              </ul>
+            </div>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section data-screen-label="Education" data-reveal="1" style="padding: 0 0 96px">
+      <h2 style="margin: 0 0 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent, #1D4ED8); display: flex; align-items: center; gap: 12px"><span style="width: 28px; height: 2px; background: var(--accent, #1D4ED8); display: inline-block"></span>Education</h2>
+      <div style="background: #ffffff; border: 1px solid #e2e5ea; border-radius: 8px; padding: 32px">
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px">
+          <h3 style="margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.01em">Baruch College / CUNY — Zicklin School of Business</h3>
+          <span style="font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--accent, #1D4ED8)">Expected Jan 2028</span>
+        </div>
+        <p style="margin: 10px 0 0; font-size: 16px; color: #3c4147">Bachelor of Business Administration — New York, NY</p>
+        <p style="margin: 6px 0 0; font-size: 15px; color: #6b7178">Major: Computer Information Systems (Data Analytics) · Minor: Communication Studies</p>
+        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px; border-top: 1px solid #eef0f3; padding-top: 22px">
+          <div style="display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa1a9; flex: none">Scholarship</span>
+            <span style="font-size: 15px; color: #2a2e33">Music Tech Scholarship</span>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 6px 12px; align-items: baseline">
+            <span style="font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #9aa1a9; flex: none">Coursework</span>
+            <span style="font-size: 15px; color: #2a2e33">Programming and Computational Thinking · Foundations of Predictive Analysis · Statistical Computing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER / CONTACT -->
+    <footer data-screen-label="Contact" data-reveal="1" style="border-top: 1px solid #e2e5ea; padding: 64px 0 80px; text-align: center">
+      <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent, #1D4ED8)">Get in touch</p>
+      <h2 style="margin: 14px 0 0; font-size: clamp(28px, 4.5vw, 40px); font-weight: 700; letter-spacing: -0.02em">Let's talk data.</h2>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 28px; margin-top: 24px; font-size: 16px">
+        <a href="mailto:khazratjona3@gmail.com">khazratjona3@gmail.com</a>
+        <span style="color: #c6cbd1">·</span>
+        <a href="tel:+13478330788">(347) 833-0788</a>
+        <span style="color: #c6cbd1">·</span>
+        <span style="color: #6b7178">Brooklyn, NY</span>
+      </div>
+      <p style="margin: 36px 0 0; font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: #9aa1a9">English · Tajik · Russian · Uzbek</p>
+    </footer>
+
+  </main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;accent&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#1D4ED8&quot;, &quot;options&quot;: [&quot;#1D4ED8&quot;, &quot;#0E7490&quot;, &quot;#047857&quot;, &quot;#B45309&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; },
+  &quot;photoShape&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;circle&quot;, &quot;options&quot;: [&quot;circle&quot;, &quot;rounded&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; },
+  &quot;motion&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;subtle&quot;, &quot;options&quot;: [&quot;subtle&quot;, &quot;minimal&quot;, &quot;none&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Theme&quot; }
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const accent = this.props.accent ?? '#1D4ED8';
+    const photoRadius = (this.props.photoShape ?? 'circle') === 'circle' ? '50%' : '18px';
+    return {
+      accent,
+      photoRadius,
+      skillGroups: [
+        { label: 'Languages', opacity: 1, items: ['Python', 'R', 'JavaScript', 'HTML', 'CSS'] },
+        { label: 'Data & Analytics Tools', opacity: 0.85, items: ['Tableau', 'SQL', 'RStudio', 'Excel (PivotTables, Power Query)', 'pandas / Jupyter'] },
+        { label: 'Office & Productivity', opacity: 0.7, items: ['Microsoft Office Suite', 'Notion', 'Canva'] },
+        { label: 'AI Tools', opacity: 0.55, items: ['ChatGPT', 'Claude', 'Microsoft Copilot', 'Perplexity AI / Comet'] },
+        { label: 'Business & Research', opacity: 0.4, items: ['Cold outreach', 'Client scheduling & follow-up', 'Archival organization', 'Grant research & tracking'] },
+        { label: 'Spoken Languages', opacity: 0.25, items: ['English', 'Tajik', 'Russian', 'Uzbek'] }
+      ],
+      jobs: [
+        {
+          dates: 'Jun 2026 – Present', tag: 'Analytics',
+          role: 'Data Analytics Resident',
+          org: 'Tech Talent Pipeline Residency (TTPR), NYC Dept. of Small Business Services — New York, NY',
+          bullets: [
+            'Build predictive models on banking datasets in Python, including loan-approval and credit card churn analysis',
+            'Design executive Tableau dashboards translating retail and SaaS revenue data into decision-ready insights',
+            'Clean and analyze large datasets with pandas, SQL, and Excel to support forecasting and business decisions'
+          ]
+        },
+        {
+          dates: 'Jan 2026 – Present', tag: 'Operations',
+          role: 'Assistant Manager (promoted from Barista)',
+          org: 'Qamaria Yemeni Coffee Co. — New York, NY',
+          bullets: [
+            'Promoted to Assistant Manager within six weeks based on operational input and performance',
+            'Direct daily operations including cash handling, register reconciliation, and inventory oversight',
+            'Train and onboard new team members and coordinate shift scheduling during peak service periods'
+          ]
+        },
+        {
+          dates: 'Feb 2025 – May 2025', tag: 'Nonprofit',
+          role: 'Development and Fundraising Intern',
+          org: 'Al Maqam Studio — New York, NY',
+          bullets: [
+            'Conducted grant research and drafted proposals aligned with nonprofit funding rules and donor priorities',
+            'Led communications with program directors, artists, and donors to improve engagement across channels',
+            'Managed outreach pipelines, donor logs, and compliance timelines in Excel and Notion'
+          ]
+        },
+        {
+          dates: 'May 2024 – Aug 2024', tag: 'STEM',
+          role: 'Student Member',
+          org: 'STEM Academy, CUNY SEEK Program — New York, NY',
+          bullets: [
+            'Selected for a competitive four-week CUNY STEM residential program',
+            'Completed hands-on projects with faculty and STEM professionals, applying concepts to real-world problems',
+            'Built foundational programming skills in HTML, CSS, JavaScript, and Python'
+          ]
+        },
+        {
+          dates: 'May 2024 – Aug 2024', tag: 'Sales',
+          role: 'Solar Ambassador',
+          org: 'Sunrun LLC — New York, NY',
+          bullets: [
+            'Delivered pitches to 100+ prospects weekly, converting leads into qualified appointments',
+            'Exceeded weekly KPIs in a commission-based environment by tailoring messaging to customer priorities',
+            'Maintained accurate CRM records for transparent lead tracking and outcome reporting'
+          ]
+        },
+        {
+          dates: 'Sept 2023 – Present', tag: 'Leadership',
+          role: 'Member',
+          org: 'Urban Male Leadership Academy — New York, NY',
+          bullets: [
+            'Participate in leadership workshops and networking events with industry professionals and alumni',
+            'Foster community through peer mentorship and collaboration, encouraging collective growth'
+          ]
+        }
+      ]
+    };
+  }
+
+  componentDidMount() {
+    const motion = this.props.motion ?? 'subtle';
+    if (motion === 'none') return;
+
+    // Sparkline draw-on-view (subtle data motion only)
+    const path = document.getElementById('spark-path');
+    if (path && motion === 'subtle') {
+      const len = path.getTotalLength ? path.getTotalLength() : 1000;
+      path.style.strokeDasharray = len;
+      path.style.strokeDashoffset = len;
+      const sparkObs = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            path.style.animation = 'spark-draw 1.6s ease-out forwards';
+            sparkObs.disconnect();
+          }
+        });
+      }, { threshold: 0.3 });
+      sparkObs.observe(path);
+    }
+
+    // Gentle fade-in on scroll for sections below the fold
+    const els = document.querySelectorAll('[data-reveal]');
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'none';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    els.forEach((el) => {
+      const r = el.getBoundingClientRect();
+      if (r.top > window.innerHeight * 0.9) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(18px)';
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        obs.observe(el);
+      }
+    });
+  }
+}
+</script>
+</body>
+</html>
